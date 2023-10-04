@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Lightgrayishviolet: hsl(270, 3%, 87%);
+  --Darkgrayishviolet: hsl(279, 6%, 55%);
+  --Verydarkviolet: hsl(278, 68%, 11%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Grotesk", sans-serif;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  position: relative;
+  width: 25%;
+  height: 100vh;
+  background-image: url(../../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.cardfront {
+  position: absolute;
+  top: 12rem;
+  left: 10rem;
+  z-index: 0;
+  opacity: 1;
+}
+
+.displayName {
+  color: var(--Lightgrayishviolet);
+  position: absolute;
+  font-size: 0.9rem;
+
+  top: 11rem;
+  left: 2rem;
+}
+.displayNumber {
+  position: absolute;
+  color: var(--White);
+  bottom: 3rem;
+  left: 2rem;
+  font-size: 2rem;
+}
+.displayMonth {
+  position: absolute;
+  top: 11rem;
+  left: 22rem;
+  color: var(--White);
+}
+.divide {
+  position: absolute;
+  top: 12rem;
+  left: 23.5rem;
+  color: var(--White);
+}
+.displayYear {
+  position: absolute;
+  top: 11rem;
+  left: 24.2rem;
+  color: var(--White);
+}
+.displayCVC {
+  position: absolute;
+  bottom: 6.5rem;
+  left: 22.5rem;
+  color: var(--White);
+}
+.cardback {
+  position: absolute;
+  top: 30rem;
+  left: 15rem;
+  opacity: 1;
+}
+.circle {
+  position: absolute;
+  background-color: var(--White);
+  z-index: 3;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  top: 1.5rem;
+  left: 2rem;
+  border: 2px solid var(--Verydarkviolett);
+}
+
+.circletwo {
+  position: absolute;
+  z-index: 3;
+  width: 2rem;
+  height: 2rem;
+
+  border-radius: 50%;
+  top: 2.5rem;
+  left: 7rem;
+  border: 2px solid var(--Lightgrayishviolet);
+}
+.right {
+  width: 75%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs {
+  width: 24rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+::placeholder {
+  color: var(--Lightgrayishviolet);
+}
+
+.name,
+.cardNumber {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: bold;
+}
+.name input,
+.cardNumber input {
+  font-family: "Space Grotesk", sans-serif;
+  border: 1px solid var(--Darkgrayishviolet);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.name label,
+.cardNumber label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 1rem 1rem 0.5rem 0rem;
+}
+.number-err,
+.name-err,
+.date-err,
+.cvc-err {
+  font-size: 0.6rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  opacity: 0;
+}
+.error {
+  color: red;
+  font-size: 0.6rem;
+  font-weight: normal;
+  opacity: 1;
+}
+.dateExp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.expName {
+  font-size: 0.8rem;
+
+  font-weight: 500;
+}
+.mm,
+.yy {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Darkgrayishviolet);
+}
+
+.CVC {
+  display: flex;
+  flex-direction: column;
+}
+.cvc {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.cvcInput {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 12rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  margin: 0.5rem 0rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Darkgrayishviolet);
+}
+.btnConfirm,
+.btnContinue {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Darkgrayishviolet);
+  color: var(--White);
+  background-color: var(--Verydarkviolet);
+  cursor: pointer;
+}
+
+.congrats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 22rem;
+}
+
+.check img {
+  transform: scale(0.9);
+  margin-bottom: 1rem;
+}
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks .thankyou {
+  font-size: 1.9rem;
+  padding: 1rem;
+  margin: 0rem 0rem 0rem 0rem;
+}
+.added {
+  font-size: 1.1rem;
+  color: var(--Darkgrayishviolet);
+  margin: 0rem 0rem 2rem 0rem;
+}
+.btnContinue {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .cardback,
+  .cardfront {
+    left: -1rem;
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .cardback,
+  .cardfront {
+    transform: scale(0.6);
+  }
+  .cardback {
+    top: 23rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .cardback,
+  .cardfront {
+    left: -5rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    background: url(../../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 13rem;
+  }
+  .right {
+    width: 30rem;
+    height: 37rem;
+    transform: scale(0.8);
+  }
+  .cardback {
+    top: -1rem;
+    left: 2rem;
+    transform: scale(0.7);
+    z-index: 1;
+  }
+  .cardfront {
+    transform: scale(0.7);
+    top: 7rem;
+    left: -2rem;
+    z-index: 2;
+  }
+}

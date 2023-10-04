@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="left">
+        <div class="cardfront">
+          <img src="./images/bg-card-front.png" alt="card-front" />
+          <p class="displayName">YOUR NAME</p>
+          <p class="displayNumber">0000 0000 0000 0000</p>
+          <p class="displayMonth">00</p>
+          <p class="displayYear">00</p>
+          <span class="divide">/</span>
+          <div class="circle"></div>
+          <div class="circletwo"></div>
+        </div>
+        <div class="cardback">
+          <img src="./images/bg-card-back.png" alt="card back" />
+          <p class="displayCVC">000</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="inputs">
+          <div class="name">
+            <label for="name">CARDHOLDER NAME</label>
+            <input
+              class="inputName"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="e.g Myla  Curbano"
+              maxlength="30"
+              required
+            />
+            <p class="name-err">Wrong Format, letter only</p>
+          </div>
+          <div class="cardNumber">
+            <label for="cardNumber">CARD NUMBER</label>
+            <input
+              maxlength="19"
+              id="cardNumber"
+              name="cardNumber"
+              type="text"
+              pattern="[0-9]+"
+              class="cardNumberInput"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+            <p class="number-err">Wrong Format, number Only</p>
+          </div>
+          <div class="dateExp">
+            <div class="monthyr">
+              <label class="expName" for="expdate">EXP. DATE(MM/YY)</label>
+              <div class="exp">
+                <div class="expdate">
+                  <input
+                    class="mm"
+                    id="expdate"
+                    type="text"
+                    placeholder="MM"
+                    maxlength="2"
+                  />
+
+                  <input
+                    class="yy"
+                    id="expdate"
+                    type="text"
+                    placeholder="YY"
+                    maxlength="3"
+                  />
+                </div>
+                <p class="date-err">Cant be blank</p>
+              </div>
+            </div>
+
+            <div class="CVC">
+              <label class="cvc" for="cvc">CVC</label>
+              <input
+                class="cvcInput"
+                id="cvc"
+                name="cvc"
+                type="text"
+                maxlength="3"
+                placeholder="e.g. 123"
+              />
+              <p class="cvc-err">cant be blank</p>
+            </div>
+          </div>
+          <button class="btnConfirm">Confirm</button>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/script/card.js"></script>
+  </body>
+</html>
